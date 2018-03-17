@@ -15,17 +15,17 @@ function totalBottles(cash){
         assets.empties += newBottles;
         assets.caps += newBottles;
       }
-      if(assets.caps > 3){
-        newBottles = Math.floor(assets.caps / 4);
-        assets.bottles += newBottles;
-        totalEarned.fromCaps += newBottles;
-        assets.caps = assets.caps % 4;
-        assets.caps += newBottles;
-        assets.empties += newBottles;
-      }
-      if(assets.empties < 2 && assets.caps < 4){
-        break;
-      }
+    if(assets.caps > 3){
+      newBottles = Math.floor(assets.caps / 4);
+      assets.bottles += newBottles;
+      totalEarned.fromCaps += newBottles;
+      assets.caps = assets.caps % 4;
+      assets.caps += newBottles;
+      assets.empties += newBottles;
+    }
+    if(assets.empties < 2 && assets.caps < 4){
+      break;
+    }
   }
   console.log("CASH SPENT: $" + cash);
   console.log("TOTAL BOTTLES: " + assets.bottles);
