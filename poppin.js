@@ -18,7 +18,7 @@ function totalBottles(cash){
       if(assets.caps > 3){
         newBottles = Math.floor(assets.caps / 4);
         assets.bottles += newBottles;
-        totalEarned.fromCaps = newBottles;
+        totalEarned.fromCaps += newBottles;
         assets.caps = assets.caps % 4;
         assets.caps += newBottles;
         assets.empties += newBottles;
